@@ -1,0 +1,62 @@
+---
+root: true
+extends: "airbnb"
+
+env:
+  es6: true
+  node: true
+  mocha: true
+  jest: true
+
+parserOptions:
+  ecmaFeatures:
+    modules: false
+    jsx: true
+
+plugins:
+  - react
+
+rules:
+  strict: [1, global]
+  no-param-reassign: 0
+  no-shadow: 1
+  comma-dangle: [2, never]
+  no-unused-vars: 1
+  space-before-function-paren: 0
+  new-cap: 0
+  eol-last: 0
+  camelcase: 1
+  quotes:
+    - error
+    - single
+    - allowTemplateLiterals: true
+  # Need to evaluate these rules
+  max-len:
+    - 1
+    - 150
+  prefer-template: 1
+  import/prefer-default-export: 1
+  import/no-extraneous-dependencies: 0
+  no-useless-escape: 1
+  prefer-arrow-callback: 1
+  arrow-body-style: 1
+  no-underscore-dangle: 0
+  global-require: 1
+  import/newline-after-import: 1
+  prefer-spread: 1
+  prefer-rest-params: 1
+
+  # Node Rules
+  no-new-require: 2
+  no-path-concat: 2
+  no-process-exit: 2
+  no-sync: 2
+  no-mixed-requires: 1
+  callback-return: 0
+  handle-callback-err: 0
+
+  # React rules
+  react/jsx-uses-react: 1
+  react/jsx-filename-extension: 0
+  react/forbid-prop-types: 0 # We should turn this on once we have a handle on our prop contracts
+  react/prop-types: 0 # Need to figure out why its looking for this.props

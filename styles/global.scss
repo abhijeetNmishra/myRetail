@@ -1,0 +1,148 @@
+/*******************************************************************************
+ * Filename     :     global.scss
+ * Author       :     Target Corporation
+ * Description  :     Imports all base and atoms modules here
+ *              :     This file is to be included globally on each page
+ * Scope:       :     Scoped from ./node_modules/tgt-pattern-libary/ via grunt
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Tools
+ ******************************************************************************/
+@import 'patterns/styles/tools/functions';
+@import 'patterns/styles/tools/breakpoint';
+@import 'patterns/styles/tools/variables';
+@import 'patterns/styles/tools/mixins';
+@import 'patterns/styles/tools/editor';
+@import 'UIMODvariables'; // Variables that are needed for specific imports like font paths
+
+/*******************************************************************************
+ * Base Rules
+ ******************************************************************************/
+@import 'patterns/styles/base/normalize';
+@import 'patterns/styles/base/animations';
+
+/*******************************************************************************
+ * Layout
+ ******************************************************************************/
+@import 'patterns/styles/layout/grid';
+@import 'patterns/styles/layout/layout';
+
+/*******************************************************************************
+ * Modules
+ * - needs to stay in sync with the Pattern Library
+ ******************************************************************************/
+
+ // Icons
+@import 'patterns/styles/modules/atoms/icons';
+@import 'patterns/styles/modules/molecules/icon-badge';
+
+// Typography
+@import 'patterns/styles/modules/atoms/flexible-text';
+@import 'patterns/styles/modules/atoms/fonts';
+@import 'patterns/styles/modules/atoms/title';
+@import 'patterns/styles/modules/atoms/heading';
+@import 'patterns/styles/modules/atoms/lists';
+
+// Advertisements & DVM
+@import 'patterns/styles/modules/atoms/ads';
+@import 'patterns/styles/modules/molecules/slingshot/dvm';
+
+// Components
+@import 'patterns/styles/modules/atoms/badge';
+@import 'patterns/styles/modules/atoms/breadcrumb';
+@import 'patterns/styles/modules/atoms/buttons';
+@import 'patterns/styles/modules/atoms/card';
+@import 'patterns/styles/modules/atoms/content';
+@import 'patterns/styles/modules/atoms/modal';
+@import 'patterns/styles/modules/atoms/backdrop';
+@import 'patterns/styles/modules/atoms/popover';
+// quantityDropdown in add to cart and miniCart
+@import 'patterns/styles/modules/atoms/quantityDropdown';
+@import 'patterns/styles/modules/organisms/minicart';
+
+// Forms
+@import 'patterns/styles/modules/atoms/form';
+@import 'patterns/styles/modules/atoms/form-checkboxes-radios';
+@import 'patterns/styles/modules/atoms/form-inputs';
+@import 'patterns/styles/modules/atoms/form-placeholder';
+@import 'patterns/styles/modules/atoms/form-ratings';
+@import 'patterns/styles/modules/molecules/form-groups';
+@import 'patterns/styles/modules/atoms/dropdown';
+@import 'patterns/styles/modules/atoms/form-dropdown-button'; // DEPRECATED
+
+// Rating Icons
+@import 'patterns/styles/modules/atoms/ratings';
+
+// Pagination Icons
+@import 'patterns/styles/modules/molecules/pagination';
+
+// Content
+@import 'patterns/styles/modules/molecules/drawer';
+@import 'patterns/styles/modules/molecules/story-card';
+@import 'patterns/styles/modules/organisms/storybox';
+@import 'patterns/styles/modules/molecules/video-player';
+@import 'patterns/styles/modules/organisms/categories';
+@import 'patterns/styles/modules/organisms/media-block';
+
+@import 'patterns/styles/modules/organisms/promo-block';
+@import 'patterns/styles/modules/organisms/shipping-method';
+
+// Product filter
+@import 'patterns/styles/modules/molecules/product-filter';
+
+// Misc molecules
+@import 'patterns/styles/modules/molecules/promo';
+@import 'patterns/styles/modules/molecules/page-loading';
+@import 'patterns/styles/modules/molecules/carousel';
+@import 'patterns/styles/modules/molecules/carousel-product';
+@import 'patterns/styles/modules/molecules/button-groups';
+@import 'patterns/styles/modules/molecules/accordion';
+@import 'patterns/styles/modules/molecules/heading-back-link';
+
+@import 'patterns/styles/modules/molecules/checkout';
+
+// Product
+@import 'patterns/styles/modules/molecules/product';
+@import 'patterns/styles/modules/molecules/details';
+@import 'patterns/styles/modules/atoms/price';
+@import 'patterns/styles/modules/atoms/ribbon';
+@import 'patterns/styles/modules/molecules/grid-rift';
+@import 'patterns/styles/modules/atoms/_pointing-divider';
+
+// Error Messages
+@import 'patterns/styles/modules/atoms/error';
+@import 'patterns/styles/modules/molecules/nothing-here';
+
+/*******************************************************************************
+ * Common Assets
+ ******************************************************************************/
+@import 'patterns/styles/modules/organisms/header';
+@import 'patterns/styles/modules/molecules/typeahead';
+@import 'patterns/styles/modules/organisms/footer';
+@import 'patterns/styles/modules/molecules/navigation';
+
+/*******************************************************************************
+ * Additional tools
+ ******************************************************************************/
+@import 'patterns/styles/tools/states';
+@import 'patterns/styles/tools/helpers';
+@import 'patterns/styles/modules/atoms/link';
+
+/*******************************************************************************
+ * Vendor
+ ******************************************************************************/
+@import 'patterns/styles/vendor/video';
+
+/*******************************************************************************
+ * Legacy
+ * - scope: Android 4.3 (although OEM's make that a soft target) and older, IE11
+ ******************************************************************************/
+
+@import 'patterns/styles/legacy/legacy-android';
+@import 'patterns/styles/legacy/ie';
+
+/*******************************************************************************
+ * Shameful overrides to make work with UI Mod
+ ******************************************************************************/
+@import 'shame';

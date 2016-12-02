@@ -1,0 +1,3 @@
+// Page action types
+export const BROWSE_DATA_LOAD = 'BROWSE_DATA_LOAD';
+export const BROWSE_DATA_LOAD_SUCCESS = 'BROWSE_DATA_LOAD_SUCCESS';

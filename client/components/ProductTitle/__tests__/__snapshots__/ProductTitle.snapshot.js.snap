@@ -1,0 +1,16 @@
+exports[`test ProductTitle renders correctly 1`] = `
+<div
+  className="row h-text-center">
+  <h2
+    className="title-product">
+    <span>
+      test title
+    </span>
+    <span
+      aria-hidden="true"
+      className="h-sr-only">
+      test title
+    </span>
+  </h2>
+</div>
+`;

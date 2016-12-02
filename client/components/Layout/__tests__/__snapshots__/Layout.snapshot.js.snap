@@ -1,0 +1,59 @@
+exports[`test Layout renders correctly 1`] = `
+<div
+  className="row row-margin">
+  <div
+    className="col-xs-12 col-md-6 col-lg-8 col-xl-8">
+    <div
+      className="row h-text-center">
+      <h2
+        className="title-product">
+        <span>
+          Ninja™ Professional Blender with Single Serve Blending Cups
+        </span>
+        <span
+          aria-hidden="true"
+          className="h-sr-only">
+          Ninja™ Professional Blender with Single Serve Blending Cups
+        </span>
+      </h2>
+    </div>
+    <div
+      className="row h-text-center">
+      <img
+        src="http://target.scene7.com/is/image/Target/14263758" />
+    </div>
+  </div>
+  <div
+    className="col-xs-12 col-md-6 col-lg-4 col-xl-4">
+    <div
+      className="row">
+      <span
+        className="online-price-value">
+        129.9
+      </span>
+      <span
+        className="online-price">
+        online price
+      </span>
+    </div>
+    <hr />
+    <div
+      className="row">
+      <div
+        className="promo promo-PDP">
+        <span
+          className="promo--text h-text-red">
+          $70 giftcard with purchase of Samsung TV
+        </span>
+      </div>
+      <div
+        className="promo promo-PDP">
+        <span
+          className="promo--text h-text-red">
+          $70 giftcard with purchase of Samsung TV
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

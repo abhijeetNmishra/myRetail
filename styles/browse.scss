@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * Filename     :     browse.scss
+ * Author       :     Target Corporation
+ * Description  :     Imports all browse partials here
+ * Scope:       :     Scoped from ./node_modules/tgt-pattern-libary/ via grunt
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Tools
+ ******************************************************************************/
+@import 'patterns/styles/tools/variables';
+@import 'UIMODvariables';
+@import 'patterns/styles/tools/mixins';
+@import 'patterns/styles/tools/functions';
+@import 'patterns/styles/tools/breakpoint';
+
+/*******************************************************************************
+ * Atoms
+ ******************************************************************************/
+// Custom Reviews
+@import 'patterns/styles/modules/atoms/customreviews';
+
+/*******************************************************************************
+ * Molecules
+ ******************************************************************************/
+// Ratings
+@import 'patterns/styles/modules/molecules/guest-rating';
+@import 'patterns/styles/modules/molecules/guestReview';
+
+// Product block
+@import 'patterns/styles/modules/molecules/variator';
+
+// Product Carousel
+@import 'patterns/styles/modules/molecules/carousel-product';
+
+// itune popover
+@import 'patterns/styles/modules/molecules/plp-Itune-popover';
+@import 'patterns/styles/modules/molecules/persia-navtabs';
+
+// Energy guide for PDP
+@import 'patterns/styles/modules/organisms/energy-guide'

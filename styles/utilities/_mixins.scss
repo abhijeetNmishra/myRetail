@@ -1,0 +1,162 @@
+/*******************************************************************************
+ * Filename     :     mixins.scss
+ * Author       :     Target Corporation
+ * Description  :     Exports the various mixins that are used in the app
+ ******************************************************************************/
+
+// TODO: If these are only being used by the Storycard then they should be move there
+
+/********************************************************************************
+* Flexible text (convert font-size from pixels to vw's, relative to breakpoint)
+********************************************************************************/
+@mixin flex-text($breakpoint, $pxvalue) {
+  $breakpoint: strip-unit($breakpoint);
+  $pxvalue: strip-unit($pxvalue);
+
+  font-size: (($pxvalue/$breakpoint) * 100) + vw;
+}
+
+@mixin link-color($color, $color-dark) {
+  color: $color;
+
+  &:hover,
+  &:focus {
+    color: $color-dark;
+    outline-color: $color-dark;
+  }
+}
+
+/*********************************************************************************
+ * Aspect Ratio
+
+ @variable $width is the relative width of the container
+ @variable $height is the relative height of the carousel-container
+ @variable $increase is the number of additional pixels to be added
+  to the containers padding-top
+
+For aspect ratios that are not 1:1, the padding of the container will be off by
+  sum of the top and bottom padding values. As a result, the $increase variable
+  adjusts for those deficits.
+ ********************************************************************************/
+@mixin aspect-ratio($width, $height, $increase) {
+  $paddingTop: ($height / $width) * 100%;
+  $pxAdjustment: $increase + px;
+
+  position: relative;
+
+  &::before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    padding-top: calc(#{$paddingTop} + #{$pxAdjustment});
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/*******************************************************************************
+ * Wraps a media query around the content you put inside the mixin. This mixin accepts a number of values:
+ *  - If a string is passed, the mixin will look for it in the $breakpoints map, and use a media query there.
+ *  - If a pixel value is passed, it will be converted to an em value using $rem-base.
+ *  - If a rem value is passed, the unit will be changed to em.
+ *  - If an em value is passed, the value will be used as-is.
+ *
+ * @param {mixed} $val - Breakpoint name or px/em/rem value to process.
+ *
+ * @output If the breakpoint is "0px and larger", outputs the content. Otherwise, outputs the content wrapped in a media query.
+ ******************************************************************************/
+@mixin breakpoint($val: small) {
+  // Size or keyword
+  $bp: nth($val, 1);
+  // Value for max-width media queries
+  $bpMax: 0;
+  // Direction of media query (up, down, or only)
+  $dir: if(length($val) > 1, nth($val, 2), up);
+  // Eventual output
+  $str: 'only screen';
+  // Is it a named media query?
+  $named: false;
+
+  // stylelint-disable block-closing-brace-newline-after, at-rule-empty-line-before, length-zero-no-unit
+  // Orientation media queries have a unique syntax
+  @if $bp == 'landscape' or $bp == 'portrait' {
+    $str: $str + ' and (orientation: #{$bp})';
+  } @else {
+    // Try to pull a named breakpoint out of the $breakpoints map
+    @if type-of($bp) == 'string' {
+      @if map-has-key($breakpoints, $bp) {
+        @if $dir == 'only' {
+          $next-bp: map-next($breakpoints, $bp);
+          @if $next-bp == null {
+            $bpMax: null;
+          }
+          @else {
+            $bpMax: $next-bp - (1/16);
+          }
+        }
+        $bp: map-get($breakpoints, $bp);
+        $named: true;
+      }
+      @else {
+        $bp: 0;
+      }
+    }
+
+    // Skip media query creation if the input is "0 up" or "0 down"
+    @if $bp > 0 or $dir == 'only' {
+      // And lo, a media query was born
+      @if $dir == 'only' {
+        @if $named == true {
+          $str: $str + ' and (min-width: #{$bp})';
+          @if $bpMax != null {
+            $str: $str + ' and (max-width: #{$bpMax})';
+          }
+        }
+      }
+      @else if $dir == 'down' {
+        $max: $bp - (1/16);
+        $str: $str + ' and (max-width: #{$max})';
+      }
+      @else {
+        $str: $str + ' and (min-width: #{$bp})';
+      }
+    }
+  }
+
+  // Output
+  @if $bp == 0em and $dir != 'only' {
+    @content;
+  } @else {
+    @media #{$str} {
+      @content;
+    }
+  }
+}
+
+/*******************************************************************************
+ * Prefixes selector $class with breakpoint keywords, allowing you to create a batch of breakpoint classes with one chunk of code. If you want to skip a breakpoint (like small, because mobile first and all that), add values to the $omit parameter.
+ *
+ * @param {string} $class - Class to prefix with the breakpoint name and a hyphen.
+ * @param {list} $omit - Named breakpoints to skip. No class will be added with breakpoints in this list.
+ ******************************************************************************/
+@mixin each-breakpoint($class, $omit: ()) {
+  // Iterate through breakpoint classes
+  @each $size in $breakpoint-classes {
+    // Only do something if the breakpoint is not in $omit
+    @if index($omit, $size) == null {
+      $val: map-get($breakpoints, $size);
+      // Prefix $class with $size and a hyphen
+      .#{$size + '-' + $class} {
+        @include breakpoint($size) {
+          @content;
+        }
+      }
+    }
+  }
+}

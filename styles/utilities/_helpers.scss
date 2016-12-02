@@ -1,0 +1,87 @@
+/*******************************************************************************
+ * Filename     :     helpers.scss
+ * Author       :     Target Corporation
+ * Description  :     Exports the various helpers that are being used through the app
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Only display content to screen readers
+ *  - See: http://a11yproject.com/posts/how-to-hide-content/
+ ******************************************************************************/
+
+.h-sr-only {
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  left: 0.1;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+/*******************************************************************************
+ * Text Alignment
+ ******************************************************************************/
+
+.h-text-center {
+  text-align: center;
+}
+
+.h-text-justify {
+  text-align: justify;
+}
+
+.h-text-right {
+  text-align: right;
+}
+
+.h-text-left {
+  text-align: left;
+}
+
+/*******************************************************************************
+ * Display
+ ******************************************************************************/
+
+.h-display-inline-block {
+  display: inline-block;
+}
+
+/*******************************************************************************
+ * Headings
+ ******************************************************************************/
+
+.h-text-hd1 {
+  font-size: $font-size-h2;
+  line-height: 1;
+  margin-bottom: $margin-standard-vertical;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h1;
+  }
+}
+
+.h-text-hd2 {
+  font-size: $font-size-h2;
+  line-height: 1.25;
+  margin-bottom: $margin-small-vertical;
+}
+
+.h-text-hd3 {
+  font-size: $font-size-h4;
+  line-height: 1.5652173913;
+  margin-bottom: $margin-xs-vertical;
+
+  a {
+    line-height: 1.2;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h3;
+  }
+}
+
+.h-text-hd4 {
+  font-size: $font-size-h4;
+}

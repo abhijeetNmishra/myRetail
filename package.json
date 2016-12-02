@@ -1,0 +1,100 @@
+{
+  "name": "@abhijeet/myretail",
+  "version": "1.0.0",
+  "description": "a sample project to build product description page using React, Redux, Express",
+  "engines": {
+    "npm": ">=3"
+  },
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "node tools/nodeVersionCheck.js",
+    "start": "cross-env NODE_ENV=development babel-node server",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhijeetNmishra/myRetail.git"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "Express",
+    "Retail"
+  ],
+  "author": "Abhijeet Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhijeetNmishra/myRetail/issues"
+  },
+  "homepage": "https://github.com/abhijeetNmishra/myRetail#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.26.0",
+    "enzyme": "^2.6.0",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "ip": "^1.1.4",
+    "isomorphic-fetch": "^2.2.1",
+    "json-loader": "^0.5.4",
+    "minimist": "^1.2.0",
+    "node-sass": "^3.13.0",
+    "postcss-loader": "^1.1.1",
+    "pug": "^2.0.0-beta6",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "react-view-pager": "^0.5.0-prerelease.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^17.0.2",
+    "babel-loader": "^6.2.8",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "chalk": "^1.1.3",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "html-webpack-plugin": "^2.24.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^17.0.3",
+    "react-test-renderer": "^15.4.1",
+    "wdio-mocha-framework": "^0.5.4",
+    "wdio-phantomjs-service": "^0.2.2",
+    "wdio-selenium-standalone-service": "0.0.7",
+    "wdio-spec-reporter": "0.0.3",
+    "webdriverio": "^4.4.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "jest": {
+    "modulePaths": [
+      "/client/"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss|less)$": "identity-obj-proxy"
+    }
+  }
+}

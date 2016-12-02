@@ -1,0 +1,18 @@
+/*******************************************************************************
+ * Filename     :     flexText.scss
+ * Author       :     Target Corporation
+ * Description  :     Exports the various variables that are used
+                      for flexible text in Storycards
+ ******************************************************************************/
+
+// overriding the global var for flex-text mixin
+$screen-sm: 320px;
+
+$ft-xxs: 12;
+$ft-xs: 15;
+$ft-sm: 18.75;
+$ft-md: 23.4375;
+$ft-lg: 29.296875;
+$ft-xl: 36.62109375;
+$ft-xxl: 45.7763671875;
+$ft-xxxl: 57.220458984375;

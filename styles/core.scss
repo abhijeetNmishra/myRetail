@@ -1,0 +1,10 @@
+/*******************************************************************************
+ * Filename     :     utilities/styles/index.scss
+ * Author       :     Target Corporation
+ * Description  :     Exports the helpers and normalize global styles
+ ******************************************************************************/
+
+:global {
+  @import 'utilities/normalize';
+  @import 'utilities/helpers';
+}

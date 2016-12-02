@@ -1,0 +1,9 @@
+/*******************************************************************************
+ * Filename     :     utilities/styles/base.scss
+ * Author       :     Target Corporation
+ * Description  :     Exports the various variables that are used globally
+ ******************************************************************************/
+
+@import 'variables/core';
+@import 'utilities/functions';
+@import 'utilities/mixins';

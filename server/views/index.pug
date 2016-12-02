@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='./main.css')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no')
+    link(id='favicon', rel='shortcut icon', type='image/png', href='https://static.targetimg1.com/mobile-config/favicon.ico')
+  body
+    block content
+    div(id="app") !{html}
+    script.
+      window.__PRELOADED_STATE__ = !{JSON.stringify(preloadedState).replace(/</g, '\\x3c')}
+    script(src="./vendor.js")
+    script(src="./main.js")
