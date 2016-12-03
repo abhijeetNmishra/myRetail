@@ -3,7 +3,7 @@ import React from 'react';
 const ProductAddToCart = (props) => {
 
   const handleClick = () => {
-    alert('added to cart');
+    console.log('added to cart');
   }
 
   return (

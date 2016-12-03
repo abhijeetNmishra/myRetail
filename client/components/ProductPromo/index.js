@@ -2,9 +2,9 @@ import React from 'react';
 
 const ProductPromo = (props) => {
   const promos = props.promos;
-  const promosElem = promos.map((promo) => {
+  const promosElem = promos.map((promo, index) => {
     return (
-      <div className="promo promo-PDP">
+      <div key={index} className="promo promo-PDP">
         <span className="promo--text h-text-red">{promo.promotionType}</span>
       </div>
     );

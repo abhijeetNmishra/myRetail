@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ProductDisclaimers = (props) => {
-  console.log(props)
   const disclaimer = props.returnpolicy[0].legalCopy;
 
   const createMarkup = (html) => {

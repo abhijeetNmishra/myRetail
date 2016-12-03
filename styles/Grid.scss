@@ -1138,6 +1138,149 @@
       background-color: #d6d6d6;
     }
   }
+
+  .highlight-list {
+    list-style-type: disc;
+    margin-left: 15px;
+  }
+
+  .filmstrip{
+	padding: 0;
+	margin: 10px 20px 10px 20px;
+	display: flex;
+  max-width: 320px;
+}
+
+.navButton{ 
+	border: 0;
+	margin: 0;
+}
+
+.viewport{ 
+	overflow-x: hidden; 
+	position: relative;
+	width: 100%;
+}
+
+.strip{ 
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap; 
+	display: flex;
+
+	-webkit-transition-property: left;
+	transition-property: left;
+	transition-duration: 0.4s;
+	transition-timing-function: ease;
+}
+
+.viewport::before{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	content: '';
+}
+
+.viewport::after{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: linear-gradient(to right, 
+		rgba(255,255,255,0) 70%,
+		rgba(255,255,255,1) 90%
+	);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	content: '';
+}
+
+
+.navButton{
+	background-color: white; 
+	color: #ccc;
+	font-weight: bold;
+}
+
+.strip-item{ 
+	background-color: #bbb;
+	height: 100px; 
+	margin: 0;
+	width: 100px;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+	font-size: 48pt;
+	font-family: Avenir;
+	font-weight: bold;
+}
+
+.strip-item:nth-child(even){
+	background-color: #ccc;
+}
+
+.rsr-root {
+  vertical-align: middle;
+  display: inline-block; }
+
+.rsr--editing:hover {
+  cursor: pointer; }
+
+.rsr {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  color: #e3e3e3;
+  overflow: hidden; }
+
+.rsr__stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #F5A71B;
+  -webkit-transition: all 0.01s;
+  -moz-transition: all 0.01s;
+  transition: all 0.01s; }
+
+.rsr__caption {
+  font-size: 1.25em;
+  vertical-align: middle;
+  margin-right: 0.5em; }
+
+.rsr--disabled .rsr-container:hover {
+  cursor: not-allowed; }
+
+  .rating-review-box {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(204, 204, 204);
+    border-radius: 3px;
+    background-color: rgb(246, 245, 245);
+    margin: 0px 10px 0px 0px;
+    padding:0px 5px 0px 5px;
+  }
+
+  .rating-review-box-right {
+    margin-left: 2px;
+  }
+
+  .image-container {
+    justify-content: center;
+  }
   /*******************************************************************************
    * Block Columns
    ******************************************************************************/

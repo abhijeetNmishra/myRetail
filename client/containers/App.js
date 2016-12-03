@@ -9,8 +9,10 @@ const App = (props) => {
   const price = browse.Offers[0].OfferPrice[0].formattedPriceValue;
   const title = browse.title;
   const returnPolicy = browse.ReturnPolicy;
+  const productHighlights = browse.ItemDescription[0].features;
+  const reviews = browse.CustomerReview[0];
   return (
-    <Layout images={images} promos={promos} price={price} title={title} returnPolicy={returnPolicy} />
+    <Layout images={images} promos={promos} price={price} title={title} returnPolicy={returnPolicy} productHighlights={productHighlights} reviews={reviews} />
   );
 };
 
