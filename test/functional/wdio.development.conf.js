@@ -8,5 +8,5 @@ exports.config = Object.assign({}, base.config, {
   }],
   reporters: ['spec'],
   logLevel: 'error',
-  services: (argv.headless) ? ['phantomjs'] : ['selenium-standalone']
+  services: ['selenium-standalone']
 });
