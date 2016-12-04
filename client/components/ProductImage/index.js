@@ -5,7 +5,7 @@ const ProductImage = (props) => {
   const primaryImage = image.PrimaryImage[0].image;
   return (
     <div className="row image-container">
-      <img src={primaryImage} alt="primary" />
+      <img id="primaryImage" src={primaryImage} alt="primary" />
     </div>
   );
 };

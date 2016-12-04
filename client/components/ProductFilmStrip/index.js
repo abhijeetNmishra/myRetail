@@ -6,6 +6,7 @@ export default class Filmstrip extends React.Component {
     super(props)
     this.state = { scrollPos: 0 }
     this.increment = parseInt(this.props.increment, 10)
+    this.updatePrimaryImage = this.updatePrimaryImage.bind(this);
   }
 
   adjustPos(increment) {
@@ -24,15 +25,22 @@ export default class Filmstrip extends React.Component {
     this.setState({ scrollPos: newPos })
   }
 
+  updatePrimaryImage(e) {
+    const currentImageSource = e.target.src;
+    const primaryImage = document.getElementById('primaryImage');
+    primaryImage.src = currentImageSource;
+  }
+
   componentDidMount() {
     this.refs.filmstrip.style.height = this.refs.strip.getBoundingClientRect().height + 'px'
   }
 
   render() {
     const alternateImages = this.props.images.AlternateImages;
+
     const stripItem = alternateImages.map((item, index) => {
       return (
-        <div key={index} className='strip-item'><img src={item.image} /></div>
+        <div key={'img-' + index} className='strip-item' onClick={this.updatePrimaryImage}><img src={item.image} /></div>
       );
     });
     return (
