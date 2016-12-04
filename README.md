@@ -44,6 +44,6 @@ run `npm run lint` to validate all linting aspect of JavaScript
 To test functional tests locally, we need to make sure, localhost is up and running before executing the tests
 run folling command in two separate tabs:
 run `npm start`
-run `npm run functions`
+run `npm run functional`
 
  
