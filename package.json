@@ -11,7 +11,8 @@
     "start": "cross-env NODE_ENV=development babel-node server",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint client"
+    "lint": "eslint client",
+    "functional": "wdio ./test/functional/wdio.development.conf.js"
   },
   "repository": {
     "type": "git",
@@ -58,7 +59,8 @@
     "redux-thunk": "^2.1.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "yargs": "^6.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -78,6 +80,7 @@
     "html-webpack-plugin": "^2.24.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^17.0.3",
+    "mocha": "^3.2.0",
     "react-test-renderer": "^15.4.1",
     "wdio-mocha-framework": "^0.5.4",
     "wdio-phantomjs-service": "^0.2.2",

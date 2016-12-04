@@ -1,0 +1,8 @@
+---
+  extends: ../../.eslintrc
+  env:
+    mocha: true
+  globals:
+    "browser": true
+  rules:
+    no-unused-expressions: 0 # This is set to 0 due to chai expects syntax
