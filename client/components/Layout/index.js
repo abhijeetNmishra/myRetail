@@ -16,7 +16,8 @@ const Layout = (props) => {
     <div className="row row-margin">
       <div className="col-xs-12 col-md-6 col-lg-8 col-xl-8 middle-xs">
         <ProductTitle title={props.title} />
-        <ProductImage images={props.images}/>
+        <br />
+        <ProductImage images={props.images} />
         <br />
         <ProductFilmStrip increment="350" images={props.images} />
         <br />
