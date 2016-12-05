@@ -1279,6 +1279,13 @@
   .image-container {
     justify-content: center;
   }
+
+  #primaryImage:hover {
+    box-shadow: 0px 0px 150px #333;
+    z-index: 2;
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+  }
   /*******************************************************************************
    * Block Columns
    ******************************************************************************/
