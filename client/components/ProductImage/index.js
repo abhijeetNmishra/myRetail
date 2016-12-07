@@ -10,7 +10,7 @@ const ProductImage = (props) => {
   );
 };
 
-React.propTypes = {
+ProductImage.propTypes = {
   images: React.PropTypes.object
 };
 

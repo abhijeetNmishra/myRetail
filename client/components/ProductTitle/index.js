@@ -11,7 +11,7 @@ const ProductTitle = (props) => {
   );
 };
 
-React.propTypes = {
+ProductTitle.propTypes = {
   title: React.PropTypes.string
 };
 

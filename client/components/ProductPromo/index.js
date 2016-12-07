@@ -16,7 +16,7 @@ const ProductPromo = (props) => {
   );
 };
 
-React.propTypes = {
+ProductPromo.propTypes = {
   promos: React.PropTypes.Array
 };
 

@@ -9,7 +9,7 @@ const ProductPrice = (props) => {
   );
 };
 
-React.propTypes = {
+ProductPrice.propTypes = {
   price: React.PropTypes.string
 };
 

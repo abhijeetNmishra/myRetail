@@ -22,7 +22,7 @@ function mapStateToProps(state) {
   };
 }
 
-React.propTypes = {
+App.propTypes = {
   browse: React.PropTypes.object
 };
 

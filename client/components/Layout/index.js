@@ -42,7 +42,7 @@ const Layout = (props) => {
   );
 };
 
-React.propTypes = {
+Layout.propTypes = {
   title: React.PropTypes.string,
   price: React.PropTypes.string,
   promos: React.PropTypes.object,
